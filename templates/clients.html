@@ -1,0 +1,30 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  {% if search %}
+  Rezultatele cautarii dupa <i>'{{search}}'</i>:
+  {% else %}
+    Lista clientilor salonului:
+  {% endif %}
+  <br><br>
+  {% if clients %}
+    <table class="list">
+      <tr><th>Nume</th><th>Telefon</th></tr>
+      {% for cid, cname, cphone in clients %}
+      <tr>
+        <td><a href="/client/{{cid}}">{{cname}}</a></td>
+        <td>{{cphone}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="warning">Nu exista rezultate!</div>
+  {% endif %}
+  <br/>
+  <form action="/search/" method="post">
+    <input type="text" name="search" placeholder="cauta client" value="{{search}}">
+    <input type="submit" value="Cauta">
+  </form>
+
+
+{% endblock content %}

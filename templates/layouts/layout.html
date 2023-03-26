@@ -1,0 +1,37 @@
+<html>
+<head>
+  {% if title %}
+    <title>{{ title }}</title>
+  {% else %}
+    <title>Unique Studio</title>
+  {% endif %}
+
+  <link rel="icon" href="/static/images/unique_studio.jpg">
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <script src="/static/scripts/script.js"></script>
+</head>
+<body>
+  <div class="header" style="color:black; font-family: 'Open Sans', sans-serif; text-shadow: 1px 1px gold; font-size: 48px;">Unique Studio<br><span style="font-size: 24px; color: black; text-shadow: 1px 1px gold;">Your Beauty Destination</span></div>
+  <div class="menu">
+    <table>
+      <tr>
+        <td>
+          <a href="/home">Home</a>
+          <a href="/clients">Clients</a>
+          <a href="/calendar">Calendar</a>
+<!--          <a href="/private">Private</a>-->
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="content">
+  {% block content %} {% endblock %}
+  </div>
+
+  <div class="footer">
+    <p>Copyright by Unique Studio SRL</p>
+  </div>
+
+</body>
+</html>

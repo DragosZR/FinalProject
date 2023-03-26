@@ -1,0 +1,23 @@
+{% extends "layouts/layout.html" %}
+{% block content %}
+
+  <h1>Calendarul salonului</h1>
+  <br>
+
+  {% if appointments %}
+    <table class="list">
+      <tr><th>Data</th><th>Ora</th><th>Client</th><th>Serviciu</th></tr>
+      {% for date, time, client, service in appointments %}
+      <tr>
+        <td>{{ date }}</td>
+        <td>{{ time }}</td>
+        <td>{{ client }}</td>
+        <td>{{ service }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <div class="warning">Nu exista programari!</div>
+  {% endif %}
+
+{% endblock content %}
