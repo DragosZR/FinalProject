@@ -1,9 +1,9 @@
 body {
   background-color: #ffe6e6;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  margin: 0;
-  height: 100%; /* added height to body */
+  font-family: Didot;
+  font-size: 20px;
+  height: 100%;
+  text-align: center;
 }
 
 a {
@@ -26,14 +26,18 @@ div.content {
 }
 
 div.header {
-  max-width: 800px;
+  max-width: 500px;
   margin: auto;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 48px;
-  margin-top: 40px;
+  font-family: Copperplate;
+  font-size: 40px;
+  margin-top: 20px;
   color: black;
   text-shadow: 2px 2px gold;
+}
+
+p.subtitle {
+  margin-top: 10px;
 }
 
 div.menu {
@@ -65,10 +69,16 @@ div.menu a:hover {
 div.logo {
   max-width: 400px;
   margin: 40px auto 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 div.logo img {
   width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 div.warning {
@@ -81,7 +91,6 @@ div.error {
   font-weight: bold;
 }
 
-/* added footer */
 div.footer {
   position: fixed;
   bottom: 0;
